@@ -1,0 +1,56 @@
+.footer {
+	width: 100%;
+	padding: 5rem 0;
+	background-color: rgba(19, 19, 19, 0.8);
+}
+
+.footer-container {
+	max-width: 1900px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 40px;
+}
+
+.footer-left {
+	height: 100%;
+	max-width: 100%;
+	margin-left: 0.5rem;
+}
+.footer-right {
+	height: 100%;
+	max-width: 100%;
+	margin-right: 0.5rem;
+}
+
+.address,
+.phone,
+.email,
+.social {
+	display: flex;
+}
+
+.social {
+	margin-top: 1rem;
+}
+
+@media screen and (max-width: 420px) {
+	.footer-container {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-left {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-right {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.social {
+		justify-content: center;
+	}
+}
