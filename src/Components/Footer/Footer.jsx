@@ -6,6 +6,7 @@ import {
 	FaPhone,
 	FaTwitter,
 } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -47,24 +48,33 @@ const Footer = () => {
 							<strong>More about me</strong>
 						</h4>
 						<p>
-							If you want to know more about me, you can take a look my Github,
-							LinkedIn, or Twiter
+							If you want to know more about me, you can take a look to my
+							Github, LinkedIn, or Twiter
 						</p>
 					</div>
 
 					<div className='social'>
-						<FaLinkedin
-							size={20}
-							style={{ color: '#fff', marginRight: '1rem' }}
-						/>
-						<FaGithub
-							size={20}
-							style={{ color: '#fff', marginRight: '1rem' }}
-						/>
-						<FaTwitter
-							size={20}
-							style={{ color: '#fff', marginRight: '1rem' }}
-						/>
+						<NavLink
+							to='https://www.linkedin.com/in/joel-mendez-martinez-front-end/'
+							target='_blank'
+						>
+							<FaLinkedin
+								size={20}
+								style={{ color: '#fff', marginRight: '1rem' }}
+							/>
+						</NavLink>
+						<NavLink to='https://github.com/JoelMendezM/' target='_blank'>
+							<FaGithub
+								size={20}
+								style={{ color: '#fff', marginRight: '1rem' }}
+							/>
+						</NavLink>
+						<NavLink to='https://twitter.com/JoelMndez2/' target='_blank'>
+							<FaTwitter
+								size={20}
+								style={{ color: '#fff', marginRight: '1rem' }}
+							/>
+						</NavLink>
 					</div>
 				</div>
 			</div>
