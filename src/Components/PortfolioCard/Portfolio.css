@@ -1,6 +1,17 @@
+.portfolio-container {
+	display: flex;
+}
+
 .portfolio-heading {
 	text-align: center;
 	padding: 4rem 0 2rem 0;
 	font-size: 3rem;
 	font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+	.portfolio-container {
+		display: flex;
+		flex-direction: column;
+	}
 }

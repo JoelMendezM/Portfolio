@@ -1,15 +1,24 @@
 .card-container {
 	max-width: 1900px;
-	margin: auto;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 20px;
-	padding-bottom: 5rem;
+	display: flex;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	margin: 0.3rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .card-content {
 	background: #1a1919;
 	padding: 1.2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
 }
 
 .project-title {
@@ -37,7 +46,8 @@
 	background-color: rgb(63, 63, 63);
 }
 
-.project-links .repository:hover {
+.project-links .repository:hover,
+.project-links .website:hover {
 	background: #1a1919;
 }
 

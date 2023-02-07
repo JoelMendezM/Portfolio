@@ -10,10 +10,10 @@ const PortfolioCard = ({
 }) => {
 	return (
 		<div className='card-container'>
-			<div className='card-content'>
-				<img src={image} alt='Two children playing' />
-				<h2 className='project-title'>{title}</h2>
-				<div className='project-detail'>
+			<div className='row'>
+				<div className='card-content'>
+					<img src={image} alt='Two children playing' className='' />
+					<h2 className='project-title'>{title}</h2>
 					<p>{description}</p>
 					<div className='project-links'>
 						<NavLink className='repository' to={repositoryUrl} target='_blank'>
