@@ -21,6 +21,12 @@
 	align-self: flex-start;
 }
 
+.image-card {
+	width: 100%;
+	height: 50vw;
+	object-fit: cover;
+}
+
 .project-title {
 	color: white;
 	padding: 0.5rem 0;
@@ -58,10 +64,29 @@
 	background-color: rgb(63, 63, 63);
 }
 
-@media screen and (max-width: 480px) {
-	.card-container {
-		max-width: 90%;
-		margin: auto;
-		grid-template-columns: 1fr;
+@media (min-width: 481px) and (max-width: 768px) {
+	.portfolio-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.image-card {
+		width: 100%;
+		height: 40vw;
+		object-fit: cover;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.portfolio-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+	}
+	.image-card {
+		width: 100%;
+		height: 25vw;
+		object-fit: cover;
 	}
 }

@@ -12,7 +12,7 @@ const PortfolioCard = ({
 		<div className='card-container'>
 			<div className='row'>
 				<div className='card-content'>
-					<img src={image} alt='Two children playing' className='' />
+					<img src={image} alt='Two children playing' className='image-card' />
 					<h2 className='project-title'>{title}</h2>
 					<p>{description}</p>
 					<div className='project-links'>
