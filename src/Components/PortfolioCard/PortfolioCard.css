@@ -3,19 +3,19 @@
 	display: flex;
 	margin: 0 auto;
 	padding-bottom: 2rem;
+	background-color: black;
 }
 
 .row {
 	display: flex;
 	align-items: center;
-	margin: 0.3rem;
+	margin: 0.7rem;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 .card-content {
 	background: #1a1919;
-	padding: 1.2rem 1rem;
 	display: flex;
 	flex-direction: column;
 	align-self: flex-start;
@@ -35,14 +35,19 @@
 	text-align: center;
 }
 
-.project-detail {
+.project-description {
 	text-align: center;
+	margin: 0.5rem;
 }
 
 .project-links {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 0.3rem;
+}
+
+.project-links a {
+	margin: 0.5rem;
 }
 
 .project-links .repository {

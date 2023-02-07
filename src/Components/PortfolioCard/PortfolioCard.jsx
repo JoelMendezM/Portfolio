@@ -14,7 +14,7 @@ const PortfolioCard = ({
 				<div className='card-content'>
 					<img src={image} alt='Two children playing' className='image-card' />
 					<h2 className='project-title'>{title}</h2>
-					<p>{description}</p>
+					<p className='project-description'>{description}</p>
 					<div className='project-links'>
 						<NavLink className='repository' to={repositoryUrl} target='_blank'>
 							<b>Repository</b>
