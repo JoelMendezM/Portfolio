@@ -49,7 +49,7 @@ const Footer = () => {
 						</h4>
 						<p>
 							If you want to know more about me, you can take a look to my
-							Github, LinkedIn, or Twiter
+							LinkedIn, Github, or Twiter
 						</p>
 					</div>
 
