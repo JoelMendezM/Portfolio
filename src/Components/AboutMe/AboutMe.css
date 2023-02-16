@@ -5,8 +5,8 @@
 } */
 
 .container-upwork .background-upwork,
-.background-front-end,
-.background-academic {
+.container-front-end .background-front-end,
+.container-academic .background-academic {
 	display: none;
 }
 
@@ -16,16 +16,63 @@
 	transition: 0.3s;
 }
 
-.container-upwork:hover .title-upwork {
+.container-upwork:hover .title-upwork,
+.container-front-end:hover .title-front-end,
+.container-academic:hover .title-academic {
 	display: none;
 }
 
 .container-upwork img {
 	border-radius: 5px;
 	margin-bottom: 0.3rem;
-	border: 1.5px solid gray;
+	border: 2.5px solid gray;
 }
 
-.container-upwork a {
+.container-upwork a,
+.container-front-end a {
 	color: rgba(255, 255, 255, 0.801);
+}
+
+.container-front-end:hover .background-front-end {
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s;
+}
+
+.container-front-end .title-front-end {
+	text-align: center;
+}
+
+.container-front-end .alkemy {
+	height: 100px;
+	border: 2.5px solid gray;
+	border-radius: 5px;
+}
+
+.container-front-end .coder {
+	height: 70px;
+	border: 2.5px solid gray;
+	border-radius: 5px;
+}
+
+.alkemy-link {
+	margin-bottom: 1rem;
+}
+
+.container-academic:hover .background-academic {
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s;
+}
+
+.container-academic strong {
+	font-weight: 900;
+	padding: 0.3rem;
+}
+
+.container-academic img {
+	max-height: 520px;
+	border: 2.5px solid gray;
+	border-radius: 5px;
+	margin-top: 1rem;
 }
