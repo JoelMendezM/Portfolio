@@ -1,5 +1,31 @@
-img:hover {
+/* img:hover {
 	scale: 1.1;
 	padding-bottom: 10px;
 	transition: 0.3s;
+} */
+
+.container-upwork .background-upwork,
+.background-front-end,
+.background-academic {
+	display: none;
+}
+
+.container-upwork:hover .background-upwork {
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s;
+}
+
+.container-upwork:hover .title-upwork {
+	display: none;
+}
+
+.container-upwork img {
+	border-radius: 5px;
+	margin-bottom: 0.3rem;
+	border: 1.5px solid gray;
+}
+
+.container-upwork a {
+	color: rgba(255, 255, 255, 0.801);
 }

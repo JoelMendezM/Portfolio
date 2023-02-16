@@ -1,5 +1,5 @@
 import { Image } from '@chakra-ui/image';
-import { Center, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Center, Grid, GridItem, Link, Text } from '@chakra-ui/react';
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/tabs';
 import bootstrap from '../../assets/skills/bootstrap.svg.png';
 import css from '../../assets/skills/css.png';
@@ -17,6 +17,9 @@ import sass from '../../assets/skills/sass.svg.png';
 import shopify from '../../assets/skills/shopify.png';
 import slack from '../../assets/skills/slack.png';
 import trello from '../../assets/skills/trello.png';
+import top from '../../assets/background/top-rated.jpg';
+import reviews from '../../assets/background/upwork-reviews.jpg';
+import marriott from '../../assets/background/marriot-testimonial.jpg';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -151,11 +154,76 @@ const AboutMe = () => {
 					</Grid>
 				</TabPanel>
 				<TabPanel>
-					<Image
-						boxSize='200px'
-						fit='cover'
-						src='https://images5.alphacoders.com/810/thumbbig-810547.webp'
-					/>
+					<Grid
+						templateRows={[
+							'repeat(1, 1fr)',
+							'repeat(1, 1fr)',
+							'repeat(1, 1fr)',
+						]}
+						templateColumns={[
+							'repeat(3, 1fr)',
+							'repeat(3, 1fr)',
+							'repeat(3, 1fr)',
+						]}
+						gap={1}
+						fontWeight={700}
+					>
+						<GridItem
+							h={660}
+							display='flex'
+							alignItems='center'
+							justifyContent='center'
+							className='container-upwork'
+						>
+							<Center flexDirection='column'>
+								<Text className='title-upwork'>FREELANCE UPWORK PLATFORM</Text>
+								<Center className='background-upwork'>
+									<Image src={top} />
+									<Image src={reviews} />
+									<Image src={marriott} />
+									<Text>If you want to take a look:</Text>
+									<Link
+										href='https://www.upwork.com/freelancers/~010243cd1d7e26063d?viewMode=1'
+										isExternal
+									>
+										Click here!
+									</Link>
+								</Center>
+							</Center>
+						</GridItem>
+						<GridItem
+							borderRight='1px solid white;'
+							borderLeft='1px solid white;'
+							h={600}
+							display='flex'
+							alignItems='center'
+							justifyContent='center'
+						>
+							<Center>
+								<Text>FRONT-END</Text>
+								<Box className='background-front-end'>
+									<Image src={top} />
+									<Image src={reviews} />
+									<Image src={marriott} />
+								</Box>
+							</Center>
+						</GridItem>
+						<GridItem
+							h={600}
+							display='flex'
+							alignItems='center'
+							justifyContent='center'
+						>
+							<Center>
+								<Text>ACADEMIC - UNIVERSITY</Text>
+								<Box className='background-academic'>
+									<Image src={top} />
+									<Image src={reviews} />
+									<Image src={marriott} />
+								</Box>
+							</Center>
+						</GridItem>
+					</Grid>
 				</TabPanel>
 				<TabPanel>
 					<Image
