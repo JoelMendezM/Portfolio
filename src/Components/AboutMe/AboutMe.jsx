@@ -1,5 +1,5 @@
 import { Image } from '@chakra-ui/image';
-import { Box, Center, Grid, GridItem, Link, Text } from '@chakra-ui/react';
+import { Center, Grid, GridItem, Link, Text } from '@chakra-ui/react';
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/tabs';
 import bootstrap from '../../assets/skills/bootstrap.svg.png';
 import css from '../../assets/skills/css.png';
@@ -20,6 +20,9 @@ import trello from '../../assets/skills/trello.png';
 import top from '../../assets/background/top-rated.jpg';
 import reviews from '../../assets/background/upwork-reviews.jpg';
 import marriott from '../../assets/background/marriot-testimonial.jpg';
+import alkemy from '../../assets/background/alkemy.png';
+import coderhouse from '../../assets/background/coderhouse.png';
+import degree from '../../assets/background/bachelor-degree.jpg';
 import './AboutMe.css';
 
 const AboutMe = () => {
@@ -198,14 +201,26 @@ const AboutMe = () => {
 							display='flex'
 							alignItems='center'
 							justifyContent='center'
+							className='container-front-end'
 						>
 							<Center>
-								<Text>FRONT-END</Text>
-								<Box className='background-front-end'>
-									<Image src={top} />
-									<Image src={reviews} />
-									<Image src={marriott} />
-								</Box>
+								<Text className='title-front-end'>FRONT-END</Text>
+								<Center className='background-front-end'>
+									<Image src={alkemy} className='alkemy' />
+									<Text>Acceleration: </Text>
+									<Link
+										className='alkemy-link'
+										href='https://assets.alkemy.org/certificates/google-oauth2%7C106402354811067069167/0688aca1-fe51-4ba8-9995-700af7f5936f.pdf'
+										isExternal
+									>
+										Certificate
+									</Link>
+									<Image src={coderhouse} className='coder' />
+									<Text>Front-end Carrier:</Text>
+									<Link>React Js</Link>
+									<Link>JavaScript</Link>
+									<Link>Desarrollo Web</Link>
+								</Center>
 							</Center>
 						</GridItem>
 						<GridItem
@@ -213,14 +228,19 @@ const AboutMe = () => {
 							display='flex'
 							alignItems='center'
 							justifyContent='center'
+							textAlign='center'
+							className='container-academic'
 						>
 							<Center>
-								<Text>ACADEMIC - UNIVERSITY</Text>
-								<Box className='background-academic'>
-									<Image src={top} />
-									<Image src={reviews} />
-									<Image src={marriott} />
-								</Box>
+								<Text className='title-academic'>ACADEMIC - UNIVERSITY</Text>
+								<Center className='background-academic'>
+									<Text>
+										I got a <strong>{`CHEMICAL BACHELOR'S DEGREE`}</strong>{' '}
+										{`'2009 -
+										2015'`}
+									</Text>
+									<Image src={degree} />
+								</Center>
 							</Center>
 						</GridItem>
 					</Grid>
