@@ -12,8 +12,6 @@ import {
 	Link,
 	Stack,
 	Textarea,
-	// Tooltip,
-	// useClipboard,
 	useColorModeValue,
 	VStack,
 } from '@chakra-ui/react';
@@ -21,8 +19,6 @@ import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
 import { MdEmail, MdOutlineEmail } from 'react-icons/md';
 
 export default function ContactForm() {
-	// const { hasCopied, onCopy } = useClipboard('example@example.com');
-
 	return (
 		<Flex bg='black' align='center' justify='center' id='contact'>
 			<Box
@@ -50,26 +46,6 @@ export default function ContactForm() {
 								justify='space-around'
 								direction={{ base: 'row', md: 'column' }}
 							>
-								{/* <Tooltip
-									label={hasCopied ? 'Email Copied!' : 'Copy Email'}
-									closeOnClick={false}
-									hasArrow
-								>
-									<IconButton
-										color='white'
-										aria-label='email'
-										variant='ghost'
-										size='lg'
-										fontSize='3xl'
-										icon={<MdEmail />}
-										_hover={{
-											bg: 'gray',
-											color: useColorModeValue('white', 'gray.700'),
-										}}
-										onClick={onCopy}
-										isRound
-									/>
-								</Tooltip> */}
 								<Link href='mailto:joel.j.mendez.m@gmail.com?subject=Information request&body=Dear Joel, I would like more information about your services. I would you like to have chat, call or video call to talk about it.'>
 									<IconButton
 										color='white'
@@ -86,7 +62,7 @@ export default function ContactForm() {
 									/>
 								</Link>
 
-								<Link href='#'>
+								<Link href='https://github.com/JoelMendezM/' target='_blank'>
 									<IconButton
 										color='white'
 										aria-label='github'
@@ -102,7 +78,7 @@ export default function ContactForm() {
 									/>
 								</Link>
 
-								<Link href='#'>
+								<Link href='https://twitter.com/JoelMndez2/' target='_blank'>
 									<IconButton
 										color='white'
 										aria-label='twitter'
@@ -117,7 +93,10 @@ export default function ContactForm() {
 									/>
 								</Link>
 
-								<Link href='#'>
+								<Link
+									href='https://www.linkedin.com/in/joel-mendez-martinez-front-end/'
+									target='_blank'
+								>
 									<IconButton
 										color='white'
 										aria-label='linkedin'
@@ -145,7 +124,7 @@ export default function ContactForm() {
 										<FormLabel>Name</FormLabel>
 
 										<InputGroup>
-											<InputLeftElement children={<BsPerson />} />
+											<InputLeftElement>{<BsPerson />}</InputLeftElement>
 											<Input type='text' name='name' placeholder='Your Name' />
 										</InputGroup>
 									</FormControl>
@@ -154,7 +133,7 @@ export default function ContactForm() {
 										<FormLabel>Email</FormLabel>
 
 										<InputGroup>
-											<InputLeftElement children={<MdOutlineEmail />} />
+											<InputLeftElement>{<MdOutlineEmail />}</InputLeftElement>
 											<Input
 												type='email'
 												name='email'
