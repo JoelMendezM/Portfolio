@@ -11,6 +11,7 @@ import {
 	UnorderedList,
 } from '@chakra-ui/react';
 import { FaRegLaughBeam } from 'react-icons/fa';
+import { HiOutlineHeart } from 'react-icons/hi';
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/tabs';
 import bootstrap from '../../assets/skills/bootstrap.svg.png';
 import css from '../../assets/skills/css.png';
@@ -36,7 +37,7 @@ import coderhouse from '../../assets/background/coderhouse.png';
 import degree from '../../assets/background/bachelor-degree.jpg';
 import './AboutMe.css';
 import Carousel from '../Carousel/Carousel';
-import salsa from '../../assets/salsa-casino.mp4';
+import salsa from '../../assets/hobbies/salsa-casino.mp4';
 
 const AboutMe = () => {
 	return (
@@ -303,36 +304,59 @@ const AboutMe = () => {
 							templateColumns={[
 								'repeat(1, 1fr)',
 								'repeat(2, 1fr)',
+								'repeat(2, 1fr)',
 								'repeat(4, 1fr)',
 							]}
 							gap={2}
 						>
 							<GridItem>
-								<Center flexDirection='column'>
+								<Center flexDirection='column' textAlign='center'>
 									<Carousel />
-									<Text>Travel Lover</Text>
+									<Text fontWeight='800'>Travel Lover</Text>
+									<Text>Each picture represent a different country</Text>
 								</Center>
 							</GridItem>
 							<GridItem className='dance'>
-								<Center flexDirection='column'>
+								<Center flexDirection='column' textAlign='center'>
 									<video controls>
 										<source src={salsa} type='video/mp4' />
 									</video>
-									<Text flexDirection='row'>
-										Dance Lover (me: red shoes {<FaRegLaughBeam />})
+									<Text fontWeight='800'>Dance Lover</Text>
+									<Text>
+										Me: red shoes <FaRegLaughBeam className='smile-icon' />
 									</Text>
 								</Center>
 							</GridItem>
 							<GridItem>
-								<Center>
-									<Image />
-									<Text>description</Text>
+								<Center flexDirection='column' textAlign='center'>
+									<iframe
+										width='280'
+										height='280'
+										src='https://www.youtube.com/embed/g9zKPCL7qmw'
+										title='YouTube video player'
+										frameBorder='0'
+										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+										allowfullscreen
+									></iframe>
+									<Text fontWeight='800'>Play and watch Basketball</Text>
+									<Text>
+										Love Golden State Warriors{' '}
+										<HiOutlineHeart className='heart-icon' />
+									</Text>
 								</Center>
 							</GridItem>
 							<GridItem>
-								<Center>
-									<Image />
-									<Text>description</Text>
+								<Center flexDirection='column' textAlign='center'>
+									<iframe
+										width='280'
+										height='280'
+										src='https://www.youtube.com/embed/4JmqqkueAdE'
+										title='YouTube video player'
+										frameBorder='0'
+										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+										allowfullscreen
+									></iframe>
+									<Text fontWeight='800'>Play and watch Ping Pong</Text>
 								</Center>
 							</GridItem>
 						</Grid>
