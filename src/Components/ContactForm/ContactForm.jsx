@@ -1,8 +1,6 @@
 import {
 	Box,
-	Button,
 	Flex,
-	FormControl,
 	FormLabel,
 	Heading,
 	IconButton,
@@ -17,8 +15,34 @@ import {
 } from '@chakra-ui/react';
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
 import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
+	const form = useRef();
+
+	const sendEmail = e => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_v5nh1ls',
+				'template_j2dzuag',
+				form.current,
+				'J1Zpmz2JuRNa1gIp6'
+			)
+			.then(
+				result => {
+					console.log(result.text);
+					alert('Message sent properly');
+					e.target.reset();
+				},
+				error => {
+					console.log(error.text);
+				}
+			);
+	};
+
 	return (
 		<Flex bg='black' align='center' justify='center' id='contact'>
 			<Box
@@ -120,50 +144,85 @@ export default function ContactForm() {
 								shadow='base'
 							>
 								<VStack spacing={5}>
-									<FormControl isRequired>
+									<form ref={form} onSubmit={sendEmail}>
 										<FormLabel>Name</FormLabel>
-
 										<InputGroup>
 											<InputLeftElement>{<BsPerson />}</InputLeftElement>
-											<Input type='text' name='name' placeholder='Your Name' />
+											<Input
+												type='text'
+												name='user_name'
+												placeholder='Your Name'
+											/>
 										</InputGroup>
-									</FormControl>
-
-									<FormControl isRequired>
 										<FormLabel>Email</FormLabel>
-
 										<InputGroup>
 											<InputLeftElement>{<MdOutlineEmail />}</InputLeftElement>
 											<Input
 												type='email'
-												name='email'
+												name='user_email'
 												placeholder='Your Email'
 											/>
 										</InputGroup>
-									</FormControl>
 
-									<FormControl isRequired>
 										<FormLabel>Message</FormLabel>
-
 										<Textarea
 											name='message'
 											placeholder='Your Message'
 											rows={6}
 											resize='none'
 										/>
-									</FormControl>
+										<Input
+											type='submit'
+											value='Send'
+											colorScheme='gray'
+											marginTop={2}
+											bg={'gray.700'}
+											color='white'
+											_hover={{
+												bg: 'gray.900',
+											}}
+										/>
+									</form>
+									{/* <FormControl ref={form} onSubmit={sendEmail} isRequired>
+										<FormLabel>Name</FormLabel>
+										<InputGroup>
+											<InputLeftElement>{<BsPerson />}</InputLeftElement>
+											<Input
+												type='text'
+												name='user_name'
+												placeholder='Your Name'
+											/>
+										</InputGroup>
 
-									<Button
-										colorScheme='gray'
-										bg={'gray.700'}
-										color='white'
-										_hover={{
-											bg: 'gray.900',
-										}}
-										isFullWidth
-									>
-										Send Message
-									</Button>
+										<FormLabel>Email</FormLabel>
+										<InputGroup>
+											<Input
+												type='email'
+												name='user_email'
+												placeholder='Your Email'
+											/>
+										</InputGroup>
+
+										<FormLabel>Message</FormLabel>
+										<Textarea
+											name='message'
+											placeholder='Your Message'
+											rows={6}
+											resize='none'
+										/>
+
+										<Input
+											type='submit'
+											value='Send'
+											colorScheme='gray'
+											marginTop={2}
+											bg={'gray.700'}
+											color='white'
+											_hover={{
+												bg: 'gray.900',
+											}}
+										/>
+									</FormControl> */}
 								</VStack>
 							</Box>
 						</Stack>
