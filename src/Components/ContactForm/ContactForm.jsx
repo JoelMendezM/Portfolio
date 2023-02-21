@@ -152,6 +152,7 @@ export default function ContactForm() {
 												type='text'
 												name='user_name'
 												placeholder='Your Name'
+												required='required'
 											/>
 										</InputGroup>
 										<FormLabel>Email</FormLabel>
@@ -161,6 +162,7 @@ export default function ContactForm() {
 												type='email'
 												name='user_email'
 												placeholder='Your Email'
+												required='required'
 											/>
 										</InputGroup>
 
@@ -170,6 +172,7 @@ export default function ContactForm() {
 											placeholder='Your Message'
 											rows={6}
 											resize='none'
+											required='required'
 										/>
 										<Input
 											type='submit'
@@ -183,46 +186,6 @@ export default function ContactForm() {
 											}}
 										/>
 									</form>
-									{/* <FormControl ref={form} onSubmit={sendEmail} isRequired>
-										<FormLabel>Name</FormLabel>
-										<InputGroup>
-											<InputLeftElement>{<BsPerson />}</InputLeftElement>
-											<Input
-												type='text'
-												name='user_name'
-												placeholder='Your Name'
-											/>
-										</InputGroup>
-
-										<FormLabel>Email</FormLabel>
-										<InputGroup>
-											<Input
-												type='email'
-												name='user_email'
-												placeholder='Your Email'
-											/>
-										</InputGroup>
-
-										<FormLabel>Message</FormLabel>
-										<Textarea
-											name='message'
-											placeholder='Your Message'
-											rows={6}
-											resize='none'
-										/>
-
-										<Input
-											type='submit'
-											value='Send'
-											colorScheme='gray'
-											marginTop={2}
-											bg={'gray.700'}
-											color='white'
-											_hover={{
-												bg: 'gray.900',
-											}}
-										/>
-									</FormControl> */}
 								</VStack>
 							</Box>
 						</Stack>
