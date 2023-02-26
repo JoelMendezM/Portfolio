@@ -11,10 +11,16 @@
 		"lint": "eslint --fix . --ext .js,.jsx"
 	},
 	"dependencies": {
+		"@chakra-ui/react": "^2.4.9",
+		"@emailjs/browser": "^3.10.0",
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"framer-motion": "^9.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.7.1",
-		"react-router-dom": "^6.8.0"
+		"react-router-dom": "^6.8.0",
+		"react-slick": "^0.29.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.27",

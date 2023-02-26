@@ -1,4 +1,3 @@
-import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar/Navbar';
 import '../Components/PortfolioCard/Portfolio.css';
 import PortfolioCard from '../Components/PortfolioCard/PortfolioCard';
@@ -8,22 +7,21 @@ const Portfolio = () => {
 	return (
 		<div>
 			<Navbar />
+			<h1 className='portfolio-heading'>PROJECTS</h1>
 			<div className='portfolio-container'>
-				<h1 className='portfolio-heading'>PROJECTS</h1>
+				{portfolioCardData.map((value, index) => {
+					return (
+						<PortfolioCard
+							key={index}
+							image={value.image}
+							title={value.title}
+							description={value.description}
+							repositoryUrl={value.repositoryUrl}
+							websiteUrl={value.websiteUrl}
+						/>
+					);
+				})}
 			</div>
-			{portfolioCardData.map((value, index) => {
-				return (
-					<PortfolioCard
-						key={index}
-						image={value.image}
-						title={value.title}
-						description={value.description}
-						repositoryUrl={value.repositoryUrl}
-						websiteUrl={value.websiteUrl}
-					/>
-				);
-			})}
-			<Footer />
 		</div>
 	);
 };
