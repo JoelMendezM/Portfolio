@@ -1,15 +1,15 @@
 import Footer from '../Components/Footer/Footer';
 import Navbar from '../Components/Navbar/Navbar';
-import ContactForm from '../Components/ContactForm/ContactForm';
+import Portfolio from './Portfolio';
 
-const Contact = () => {
+const Project = () => {
 	return (
 		<div>
 			<Navbar />
-			<ContactForm />
+			<Portfolio />
 			<Footer />
 		</div>
 	);
 };
 
-export default Contact;
+export default Project;
