@@ -4,7 +4,7 @@ import Home from './Routes/Home';
 import Portfolio from './Routes/Portfolio';
 import About from './Routes/About';
 import Contact from './Routes/Contact';
-import Project from './Routes/Project';
+import Project from './Routes/Projects';
 import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {

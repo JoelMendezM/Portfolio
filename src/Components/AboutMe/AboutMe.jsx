@@ -336,7 +336,7 @@ const AboutMe = () => {
 										title='YouTube video player'
 										frameBorder='0'
 										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-										allowfullscreen
+										allowFullScreen
 									></iframe>
 									<Text fontWeight='800'>Play and watch Basketball</Text>
 									<Text>
@@ -354,7 +354,7 @@ const AboutMe = () => {
 										title='YouTube video player'
 										frameBorder='0'
 										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-										allowfullscreen
+										allowFullScreen
 									></iframe>
 									<Text fontWeight='800'>Play and watch Ping Pong</Text>
 								</Center>

@@ -4,6 +4,10 @@
 	transition: 0.3s;
 } */
 
+.container-upwork:hover {
+	max-height: 750px;
+}
+
 .container-upwork .background-upwork,
 .container-front-end .background-front-end,
 .container-academic .background-academic {
